@@ -1,0 +1,49 @@
+{
+    "name": "demo-client",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --mode development",
+        "dev:ssl": "SSL=true vite --mode development",
+        "test": "vitest run",
+        "eslint:check": "eslint",
+        "eslint:fix": "eslint --fix",
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write ."
+    },
+    "dependencies": {
+        "@servicepattern/gn-lib": "^1.0.19",
+        "@servicepattern/ui": "0.54.6",
+        "@tanstack/react-query": "^5.74.4",
+        "dayjs": "^1.11.13",
+        "jotai": "^2.12.3",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^7.5.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.17.30",
+        "@types/react": "^18.3.20",
+        "@types/react-dom": "^18.3.5",
+        "@vitejs/plugin-basic-ssl": "^2.0.0",
+        "@vitejs/plugin-react-swc": "^3.9.0",
+        "autoprefixer": "^10.4.21",
+        "eslint": "^9.24.0",
+        "eslint-config-prettier": "^10.1.2",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-prettier": "^5.2.6",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-simple-import-sort": "^12.1.1",
+        "postcss": "^8.5.3",
+        "prettier": "^3.5.3",
+        "tailwindcss": "^3.4.17",
+        "tailwindcss-animate": "^1.0.7",
+        "typescript": "^5.8.3",
+        "typescript-eslint": "^8.30.1",
+        "vite": "^6.3.1",
+        "vitest": "^3.1.1"
+    },
+    "packageManager": "yarn@4.9.2+sha256.ca4310f8ba997b4643a000ce512d9772e01c1485df35511114b325315960acb7"
+}

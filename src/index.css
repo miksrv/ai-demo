@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../public/fonts/NotoSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../public/fonts/NotoSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../public/fonts/NotoSans-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../public/fonts/NotoSans-Bold.ttf');
+}
+
+@layer components {
+    .field-layout-label-full-width > label {
+        @apply w-full block;
+    }
+
+    .field-layout-label-full-width > label > div {
+        height: 14px;
+    }
+
+    .field-layout-label-full-width > label svg {
+        display: none;
+    }
+
+    .field-layout-label-full-width > label:hover svg {
+        display: inline;
+    }
+}
+
+/* Prevent drag-and-drop on grid spacer columns */
+[data-head][style*='--header-SPACER-size'] {
+    pointer-events: none !important;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

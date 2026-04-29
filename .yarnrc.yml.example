@@ -1,0 +1,16 @@
+#cacheFolder: ../libraries/client
+
+enableGlobalCache: false
+
+enableTelemetry: false
+
+nodeLinker: node-modules
+
+npmScopes:
+    servicepattern:
+        npmAlwaysAuth: true
+        npmAuthToken: YOUR_GITHUB_PACKAGES_TOKEN
+        npmPublishRegistry: 'https://npm.pkg.github.com'
+        npmRegistryServer: 'https://npm.pkg.github.com'
+
+yarnPath: .yarn/releases/yarn-4.9.2.cjs

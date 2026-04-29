@@ -1,0 +1,28 @@
+# IDE
+.vscode/
+.idea/
+
+# Yarn
+.yarn/
+
+# ESLint and Prettier config
+eslint.config.mjs
+.prettierrc
+
+# TypeScript declarations
+declarations.d.ts
+
+# Node
+node_modules/
+build/
+dist/
+coverage/
+convertJsonToExcel.ts
+convertExcelToJson.ts
+
+# MSW
+public/mockServiceWorker.js
+
+# Jest
+jest.config.ts
+jest.setup.ts

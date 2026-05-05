@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { createHashRouter, Navigate } from 'react-router-dom'
 
 import { AppLayout } from '@/components/AppLayout'
-import { TaskCard } from '@/components/TaskCard'
 import { TaskDetailModal } from '@/components/TaskDetailModal'
+import { TaskGrid } from '@/components/TaskGrid'
 import { Task } from '@/types/task'
 
 const INITIAL_TASKS: Task[] = [
@@ -45,11 +45,6 @@ const DemoPage: React.FC = () => {
     const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS)
     const [selectedTask, setSelectedTask] = useState<Task | null>(null)
 
-    const handleOpen = (id: string) => {
-        const task = tasks.find((t) => t.id === id)
-        if (task) setSelectedTask(task)
-    }
-
     const handleSave = (updated: Task) => {
         setTasks((prev) => prev.map((t) => (t.id === updated.id ? updated : t)))
     }
@@ -58,21 +53,7 @@ const DemoPage: React.FC = () => {
         <div className="p-8">
             <h2 className="text-2xl font-semibold text-neutral-900">Demo</h2>
             <p className="mt-2 mb-6 text-neutral-500">Claude AI Demo Project</p>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                <TaskCard
-                    id=""
-                    title=""
-                    status="todo"
-                    assignee={{ name: '', avatarUrl: '' }}
-                    priority="low"
-                    dueDate=""
-                    onClick={() => {}}
-                    isLoading
-                />
-                {tasks.map((task) => (
-                    <TaskCard key={task.id} {...task} onClick={handleOpen} />
-                ))}
-            </div>
+            <TaskGrid tasks={tasks} onTaskClick={setSelectedTask} />
 
             {selectedTask && (
                 <TaskDetailModal

@@ -1,0 +1,1 @@
+- [TaskGrid feature conventions](project_task_grid_conventions.md) — patterns, gaps, and testing conventions from the April 2026 TaskGrid review

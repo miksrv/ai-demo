@@ -1,0 +1,1 @@
+- [Project conventions and stack](project_conventions.md) — import alias @/, neutral/blue Tailwind palette, named exports, Task type shape, TaskCard onClick takes id not Task
